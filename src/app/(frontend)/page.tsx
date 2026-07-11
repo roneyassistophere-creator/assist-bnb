@@ -26,29 +26,29 @@ const stats = [
 const serviceCategories = [
   {
     title: 'Airbnb Virtual Assistant',
-    href: '/services/airbnb-va',
+    href: '/solutions/airbnb-va',
     description:
       'Guest communication, cleaning coordination, calendar management, and everything else that keeps a listing running day to day.',
   },
   {
     title: 'Direct Booking Engine',
-    href: '/services/direct-booking-engine',
+    href: '/solutions/direct-booking-engine',
     description:
       'Your own booking website, integrated payments, and organic growth so you rely less on platform commission.',
   },
   {
     title: 'Lead Generation',
-    href: '/services/lead-generation',
+    href: '/solutions/lead-generation',
     description: 'A consistent pipeline of landlord leads and direct guest bookings.',
   },
   {
     title: 'Social Media Management',
-    href: '/services/social-media-management',
+    href: '/solutions/social-media-management',
     description: 'Content, scheduling, and community engagement that builds a brand beyond the listing.',
   },
   {
     title: 'Systems Building',
-    href: '/services/systems-building',
+    href: '/solutions/systems-building',
     description: 'SOPs, automation, and team structuring so your business runs without depending on you.',
   },
   {
@@ -149,10 +149,10 @@ export default async function HomePage() {
               Book a Free Call
             </Link>
             <Link
-              href="/services"
+              href="/solutions"
               className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 font-medium hover:bg-muted transition-colors"
             >
-              Our Services
+              Our Solutions
             </Link>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Services overview */}
+      {/* Solutions overview */}
       <section className="py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
@@ -215,10 +215,10 @@ export default async function HomePage() {
           </div>
           <div className="text-center mt-12">
             <Link
-              href="/services"
+              href="/solutions"
               className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 font-medium hover:bg-muted transition-colors"
             >
-              View All Services
+              View All Solutions
             </Link>
           </div>
         </div>

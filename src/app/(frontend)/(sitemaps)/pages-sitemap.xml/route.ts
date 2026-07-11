@@ -33,7 +33,7 @@ const getPagesSitemap = unstable_cache(
 
     const hardcodedPages: { slug: string; loc: string; priority: number; changefreq: Changefreq }[] = [
       { slug: 'home', loc: `${SITE_URL}/`, priority: 1.0, changefreq: 'weekly' },
-      { slug: 'services', loc: `${SITE_URL}/services`, priority: 0.9, changefreq: 'monthly' },
+      { slug: 'solutions', loc: `${SITE_URL}/solutions`, priority: 0.9, changefreq: 'monthly' },
       { slug: 'about', loc: `${SITE_URL}/about`, priority: 0.8, changefreq: 'monthly' },
       { slug: 'blog', loc: `${SITE_URL}/blog`, priority: 0.8, changefreq: 'daily' },
       { slug: 'careers', loc: `${SITE_URL}/careers`, priority: 0.6, changefreq: 'monthly' },

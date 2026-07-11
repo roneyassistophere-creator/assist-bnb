@@ -1,4 +1,22 @@
-import { Home, Layers, Users, BookOpen, Mail, TrendingUp, HelpCircle } from 'lucide-react'
+import {
+  Home,
+  Layers,
+  Users,
+  BookOpen,
+  Mail,
+  TrendingUp,
+  HelpCircle,
+  Globe,
+  Star,
+  Settings,
+  BarChart2,
+  ArrowUpRight,
+  Briefcase,
+  Info,
+  UserCheck,
+  Building2,
+  FileText,
+} from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 export type NavGrandchild = {
@@ -9,6 +27,7 @@ export type NavGrandchild = {
 export type NavChild = {
   label: string
   href: string
+  icon?: LucideIcon
   children?: NavGrandchild[]
 }
 
@@ -94,15 +113,15 @@ const siteConfig: SiteConfig = {
   nav: [
     { label: 'Home', href: '/', icon: Home },
     {
-      label: 'Services',
-      href: '/services',
+      label: 'Solutions',
+      href: '/solutions',
       icon: Layers,
       children: [
-        { label: 'Airbnb Virtual Assistant', href: '/services/airbnb-va' },
-        { label: 'Direct Booking Engine', href: '/services/direct-booking-engine' },
-        { label: 'Lead Generation', href: '/services/lead-generation' },
-        { label: 'Social Media Management', href: '/services/social-media-management' },
-        { label: 'Systems Building', href: '/services/systems-building' },
+        { label: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va', icon: Home },
+        { label: 'Direct Booking Engine', href: '/solutions/direct-booking-engine', icon: Globe },
+        { label: 'Lead Generation', href: '/solutions/lead-generation', icon: TrendingUp },
+        { label: 'Social Media Management', href: '/solutions/social-media-management', icon: Star },
+        { label: 'Systems Building', href: '/solutions/systems-building', icon: Settings },
       ],
     },
     {
@@ -110,10 +129,10 @@ const siteConfig: SiteConfig = {
       href: '/roi-performance',
       icon: TrendingUp,
       children: [
-        { label: 'ROI Calculator', href: '/roi-performance/roi-calculator' },
-        { label: 'Enter the Airbnb Market', href: '/roi-performance/enter-airbnb-market' },
-        { label: 'Consultancy & Training', href: '/roi-performance/consultancy-and-training' },
-        { label: 'Performance Optimisation', href: '/roi-performance/performance-optimisation' },
+        { label: 'ROI Calculator', href: '/roi-performance/roi-calculator', icon: BarChart2 },
+        { label: 'Enter the Airbnb Market', href: '/roi-performance/enter-airbnb-market', icon: ArrowUpRight },
+        { label: 'Consultancy & Training', href: '/roi-performance/consultancy-and-training', icon: Briefcase },
+        { label: 'Performance Optimisation', href: '/roi-performance/performance-optimisation', icon: TrendingUp },
       ],
     },
     {
@@ -121,12 +140,12 @@ const siteConfig: SiteConfig = {
       href: '/about',
       icon: Users,
       children: [
-        { label: 'About Us', href: '/about' },
-        { label: 'Why Us', href: '/about/why-us' },
-        { label: 'Our Team', href: '/about/our-team' },
-        { label: 'Our Clients', href: '/about/our-clients' },
-        { label: 'Client Reviews', href: '/about/reviews' },
-        { label: 'Case Studies', href: '/about/case-studies' },
+        { label: 'About Us', href: '/about', icon: Users },
+        { label: 'Why Us', href: '/about/why-us', icon: Info },
+        { label: 'Our Team', href: '/about/our-team', icon: UserCheck },
+        { label: 'Our Clients', href: '/about/our-clients', icon: Building2 },
+        { label: 'Client Reviews', href: '/about/reviews', icon: Star },
+        { label: 'Case Studies', href: '/about/case-studies', icon: FileText },
       ],
     },
     { label: 'Blog', href: '/blog', icon: BookOpen },
@@ -137,13 +156,13 @@ const siteConfig: SiteConfig = {
   // ─── Footer links ──────────────────────────────────────────────────────────
   footerLinks: [
     {
-      heading: 'Services',
+      heading: 'Solutions',
       links: [
-        { label: 'Airbnb Virtual Assistant', href: '/services/airbnb-va' },
-        { label: 'Direct Booking Engine', href: '/services/direct-booking-engine' },
-        { label: 'Lead Generation', href: '/services/lead-generation' },
-        { label: 'Social Media Management', href: '/services/social-media-management' },
-        { label: 'Systems Building', href: '/services/systems-building' },
+        { label: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+        { label: 'Direct Booking Engine', href: '/solutions/direct-booking-engine' },
+        { label: 'Lead Generation', href: '/solutions/lead-generation' },
+        { label: 'Social Media Management', href: '/solutions/social-media-management' },
+        { label: 'Systems Building', href: '/solutions/systems-building' },
       ],
     },
     {

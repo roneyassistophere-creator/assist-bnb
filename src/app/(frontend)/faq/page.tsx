@@ -43,7 +43,7 @@ const categories = [
     ],
   },
   {
-    label: 'Our Services',
+    label: 'Our Solutions',
     faqs: [
       {
         q: 'What does the Airbnb Virtual Assistant service cover?',

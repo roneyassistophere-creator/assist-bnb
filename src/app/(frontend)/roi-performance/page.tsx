@@ -145,7 +145,7 @@ export default async function RoiPerformancePage() {
           <section className="py-20 bg-muted">
             <div className="container max-w-5xl">
               <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
-                Explore Growth & ROI Services
+                Explore Growth & ROI Solutions
               </h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {subServices.map((service) => (

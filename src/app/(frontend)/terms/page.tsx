@@ -52,7 +52,7 @@ export default async function TermsPage() {
             engaging {siteConfig.org.legalName}, you agree to these terms.
           </p>
 
-          <h2>2. Services</h2>
+          <h2>2. Solutions</h2>
           <p>Our services may include, depending on what is agreed with you:</p>
           <ul>
             <li>Short-term rental virtual assistance</li>

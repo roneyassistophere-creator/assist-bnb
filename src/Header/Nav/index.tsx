@@ -51,7 +51,7 @@ export const HeaderNav: React.FC = () => {
             {/* Dropdown panel — bridge gap with pt-1 */}
             <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover/top:block z-50 pt-1">
               <div className="bg-background border border-border rounded-lg shadow-lg min-w-44 py-1">
-                {/* "All Services" link */}
+                {/* "All Solutions" link */}
                 <Link
                   href={item.href}
                   className={clsx(
@@ -63,6 +63,7 @@ export const HeaderNav: React.FC = () => {
                 </Link>
 
                 {item.children!.map((child) => {
+                  const ChildIcon = child.icon
                   const childActive =
                     pathname === child.href || pathname.startsWith(child.href + '/')
                   const hasGrandchildren = !!child.children?.length
@@ -73,10 +74,11 @@ export const HeaderNav: React.FC = () => {
                         key={child.href}
                         href={child.href}
                         className={clsx(
-                          'flex items-center px-4 py-2 text-sm transition-colors hover:bg-muted hover:text-primary',
+                          'flex items-center gap-2 px-4 py-2 text-sm transition-colors hover:bg-muted hover:text-primary',
                           childActive ? 'text-primary font-medium' : 'text-foreground/80',
                         )}
                       >
+                        {ChildIcon && <ChildIcon className="w-4 h-4 shrink-0 text-muted-foreground" />}
                         {child.label}
                       </Link>
                     )
@@ -92,7 +94,10 @@ export const HeaderNav: React.FC = () => {
                           childActive ? 'text-primary font-medium' : 'text-foreground/80',
                         )}
                       >
-                        {child.label}
+                        <span className="flex items-center gap-2">
+                          {ChildIcon && <ChildIcon className="w-4 h-4 shrink-0 text-muted-foreground" />}
+                          {child.label}
+                        </span>
                         <ChevronRight className="w-3 h-3 text-muted-foreground ml-2 shrink-0" />
                       </Link>
 

@@ -75,10 +75,10 @@ export const ServiceTemplate: React.FC<ServiceTemplateContent> = ({
               Book a Free Call
             </Link>
             <Link
-              href="/services"
+              href="/solutions"
               className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 font-medium hover:bg-background transition-colors"
             >
-              See All Services
+              See All Solutions
             </Link>
           </div>
         </div>

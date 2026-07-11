@@ -31,6 +31,7 @@ function SubServiceRow({ label, href, onClose }: { label: string; href: string; 
 function ServiceRow({ item, onClose }: { item: NavChild; onClose: () => void }) {
   const [expanded, setExpanded] = useState(false)
   const pathname = usePathname()
+  const Icon = item.icon
   const hasChildren = !!item.children?.length
 
   if (!hasChildren) {
@@ -39,10 +40,11 @@ function ServiceRow({ item, onClose }: { item: NavChild; onClose: () => void }) 
         href={item.href}
         onClick={onClose}
         className={clsx(
-          'flex items-center h-11 pl-8 pr-4 border-b border-border text-sm transition-colors hover:bg-muted',
+          'flex items-center gap-2.5 h-11 pl-8 pr-4 border-b border-border text-sm transition-colors hover:bg-muted',
           pathname === item.href ? 'text-primary font-medium' : 'text-foreground/80',
         )}
       >
+        {Icon && <Icon className="w-4 h-4 shrink-0 text-muted-foreground" />}
         {item.label}
       </Link>
     )
@@ -55,7 +57,10 @@ function ServiceRow({ item, onClose }: { item: NavChild; onClose: () => void }) 
         aria-expanded={expanded}
         onClick={() => setExpanded((p) => !p)}
       >
-        {item.label}
+        <span className="flex items-center gap-2.5">
+          {Icon && <Icon className="w-4 h-4 shrink-0 text-muted-foreground" />}
+          {item.label}
+        </span>
         <ChevronRight
           className={clsx(
             'w-4 h-4 text-muted-foreground shrink-0 transition-transform duration-200',
