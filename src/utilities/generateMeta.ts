@@ -26,6 +26,10 @@ const buildTitle = (metaTitle?: string | null): string =>
     ? siteConfig.seo.titleTemplate.replace('%s', metaTitle)
     : siteConfig.seo.defaultTitle
 
+// Wraps an already-composed title as "absolute" so the root layout's `title.template`
+// (which applies `%s | Assist BNB`) does not wrap it a second time.
+const absoluteTitle = (title: string): Metadata['title'] => ({ absolute: title })
+
 // ─── For blog posts (from Posts collection) ────────────────────────────────
 
 export const generatePostMeta = async (args: {
@@ -39,7 +43,7 @@ export const generatePostMeta = async (args: {
   const url = doc?.slug ? `${getServerSideURL()}/blog/${doc.slug}` : getServerSideURL()
 
   return {
-    title,
+    title: absoluteTitle(title),
     description,
     alternates: { canonical: url },
     openGraph: mergeOpenGraph({
@@ -88,7 +92,7 @@ export const generatePageMeta = async (args: {
       : { index: true, follow: true, googleBot: { index: true, follow: true } }
 
   return {
-    title,
+    title: absoluteTitle(title),
     description: metaDescription,
     robots,
     alternates: { canonical },

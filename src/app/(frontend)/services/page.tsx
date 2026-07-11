@@ -17,46 +17,59 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const services = [
   {
-    title: 'Strategy & Consulting',
-    slug: 'strategy',
+    title: 'Airbnb Virtual Assistant',
+    slug: 'airbnb-va',
     description:
-      'We work with you to define goals, identify opportunities, and build a roadmap that sets your business up for sustainable growth.',
-    highlights: ['Market research', 'Competitive analysis', 'Growth roadmapping', 'KPI definition'],
+      'A full remote operations team for your day-to-day: guest communication, guest vetting, check-in/out, cleaning coordination, calendar management, pricing, listings, photography, and monthly finance reporting.',
+    highlights: [
+      'Guest communication & vetting',
+      'Cleaning & maintenance coordination',
+      'Listing creation & pricing optimisation',
+      'Monthly finance reporting',
+    ],
   },
   {
-    title: 'Web Design & UX',
-    slug: 'design',
+    title: 'Direct Booking Engine',
+    slug: 'direct-booking-engine',
     description:
-      'Beautiful, conversion-focused design that earns trust and guides users to take action — on every device.',
-    highlights: ['UI/UX design', 'Wireframing', 'Design systems', 'Accessibility'],
+      'A booking website and integrated payment system of your own — so growth does not depend entirely on platform commission.',
+    highlights: [
+      'Direct booking website design',
+      'Booking engine & payment integration',
+      'SEO & organic growth',
+      'Google Ads management',
+    ],
   },
   {
-    title: 'Web Development',
-    slug: 'development',
+    title: 'Lead Generation',
+    slug: 'lead-generation',
     description:
-      'Fast, secure, and scalable web applications built on modern frameworks with performance baked in from day one.',
-    highlights: ['Next.js / React', 'CMS integration', 'API development', 'Performance optimisation'],
+      'A consistent, structured pipeline of opportunities — landlords to onboard and guests to book direct, outside of platform commission.',
+    highlights: ['Landlord lead generation', 'Direct guest lead generation'],
   },
   {
-    title: 'Search Engine Optimisation',
-    slug: 'seo',
+    title: 'Social Media Management',
+    slug: 'social-media-management',
     description:
-      'Technical and content SEO that earns lasting organic visibility on the platforms your customers use to find solutions.',
-    highlights: ['Technical audit', 'On-page optimisation', 'Link building', 'Local SEO'],
+      'Content, scheduling, and community engagement that builds a brand — not just a listing that disappears in the algorithm.',
+    highlights: [
+      'Content creation & strategy',
+      'Posting & scheduling',
+      'Community engagement',
+      'Multi-platform management',
+    ],
   },
   {
-    title: 'Paid Advertising',
-    slug: 'ads',
+    title: 'Systems Building',
+    slug: 'systems-building',
     description:
-      'Data-driven paid campaigns across Google, Meta, and LinkedIn that reach the right audience at the right time.',
-    highlights: ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'Conversion tracking'],
-  },
-  {
-    title: 'Analytics & Reporting',
-    slug: 'analytics',
-    description:
-      'Clear, actionable reporting so you always know what is working, what is not, and where to invest next.',
-    highlights: ['GA4 setup', 'Custom dashboards', 'Attribution modelling', 'Monthly reviews'],
+      'The operational infrastructure — SOPs, automation, and team structuring — that lets your STR business run without depending entirely on you.',
+    highlights: [
+      'STR business setup',
+      'Operations automation',
+      'SOP creation',
+      'Team structuring',
+    ],
   },
 ]
 
@@ -73,7 +86,7 @@ export default async function ServicesPage() {
               name: seoDoc?.meta?.title ?? 'Services',
               description:
                 seoDoc?.meta?.description ??
-                `Explore the full range of services offered by ${siteConfig.name}.`,
+                `Every service ${siteConfig.name} offers UK Airbnb and short-term rental hosts.`,
               url: `${siteConfig.url}/services`,
               type: 'WebPage',
             }),
@@ -88,9 +101,14 @@ export default async function ServicesPage() {
       {/* Header */}
       <section className="py-24 bg-muted text-center px-4">
         <div className="container max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Every Service Your STR Business Needs</h1>
           <p className="text-lg text-muted-foreground">
-            Everything you need to grow your business online — under one roof.
+            We work as your backend operations team — not just a task-completion service. Explore
+            each area below, or{' '}
+            <Link href="/roi-performance" className="text-primary hover:underline">
+              see our Growth &amp; ROI services
+            </Link>
+            .
           </p>
         </div>
       </section>
@@ -108,10 +126,10 @@ export default async function ServicesPage() {
                   <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
                   <p className="text-muted-foreground mb-6">{service.description}</p>
                   <Link
-                    href="/contact"
+                    href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center rounded-md border border-border px-5 py-2.5 text-sm font-medium hover:bg-muted transition-colors"
                   >
-                    Enquire about this service
+                    Explore {service.title}
                   </Link>
                 </div>
                 <ul className="rounded-lg border border-border divide-y divide-border">

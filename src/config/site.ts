@@ -1,4 +1,4 @@
-import { Home, Layers, Users, BookOpen, Mail } from 'lucide-react'
+import { Home, Layers, Users, BookOpen, Mail, TrendingUp, HelpCircle } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 export type NavGrandchild = {
@@ -67,9 +67,9 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
   // ─── Identity ──────────────────────────────────────────────────────────────
   name: 'Assist BNB',
-  tagline: 'We grow your business.',
+  tagline: 'Your team for short-term rental growth.',
   description:
-    'Assist BNB delivers world-class digital marketing, SEO, and web design for modern businesses.',
+    'Assist BNB is a UK-based Airbnb and short-term rental operations partner — guest communication, cleaning coordination, listing optimisation, and the backend systems that keep an STR business running.',
   url: process.env.NEXT_PUBLIC_SERVER_URL ?? 'http://localhost:3000',
 
   // ─── Logo ──────────────────────────────────────────────────────────────────
@@ -81,9 +81,9 @@ const siteConfig: SiteConfig = {
   // ─── SEO defaults ──────────────────────────────────────────────────────────
   seo: {
     titleTemplate: '%s | Assist BNB',
-    defaultTitle: 'Assist BNB — Digital Marketing & Web Design',
+    defaultTitle: 'Assist BNB — Airbnb & Short-Term Rental Operations',
     defaultDescription:
-      'Assist BNB delivers world-class SEO, web design, and paid advertising for modern businesses.',
+      'Assist BNB handles guest communication, cleaning coordination, listing optimisation, and backend systems for UK Airbnb and short-term rental hosts.',
     defaultOgImage: '/website-template-OG.webp',
     twitterHandle: '@assistbnb',
     googleVerification: process.env.GOOGLE_SITE_VERIFICATION ?? '',
@@ -98,72 +98,64 @@ const siteConfig: SiteConfig = {
       href: '/services',
       icon: Layers,
       children: [
-        {
-          label: 'Service 1',
-          href: '/services/service-1',
-          children: [
-            { label: 'Sub Service 1', href: '/services/service-1/sub-service-1' },
-            { label: 'Sub Service 2', href: '/services/service-1/sub-service-2' },
-            { label: 'Sub Service 3', href: '/services/service-1/sub-service-3' },
-          ],
-        },
-        {
-          label: 'Service 2',
-          href: '/services/service-2',
-          children: [
-            { label: 'Sub Service 1', href: '/services/service-2/sub-service-1' },
-            { label: 'Sub Service 2', href: '/services/service-2/sub-service-2' },
-            { label: 'Sub Service 3', href: '/services/service-2/sub-service-3' },
-          ],
-        },
-        {
-          label: 'Service 3',
-          href: '/services/service-3',
-          children: [
-            { label: 'Sub Service 1', href: '/services/service-3/sub-service-1' },
-            { label: 'Sub Service 2', href: '/services/service-3/sub-service-2' },
-            { label: 'Sub Service 3', href: '/services/service-3/sub-service-3' },
-          ],
-        },
-        {
-          label: 'Service 4',
-          href: '/services/service-4',
-          children: [
-            { label: 'Sub Service 1', href: '/services/service-4/sub-service-1' },
-            { label: 'Sub Service 2', href: '/services/service-4/sub-service-2' },
-            { label: 'Sub Service 3', href: '/services/service-4/sub-service-3' },
-          ],
-        },
-        {
-          label: 'Service 5',
-          href: '/services/service-5',
-          children: [
-            { label: 'Sub Service 1', href: '/services/service-5/sub-service-1' },
-            { label: 'Sub Service 2', href: '/services/service-5/sub-service-2' },
-            { label: 'Sub Service 3', href: '/services/service-5/sub-service-3' },
-          ],
-        },
+        { label: 'Airbnb Virtual Assistant', href: '/services/airbnb-va' },
+        { label: 'Direct Booking Engine', href: '/services/direct-booking-engine' },
+        { label: 'Lead Generation', href: '/services/lead-generation' },
+        { label: 'Social Media Management', href: '/services/social-media-management' },
+        { label: 'Systems Building', href: '/services/systems-building' },
       ],
     },
-    { label: 'About', href: '/about', icon: Users },
+    {
+      label: 'Growth & ROI',
+      href: '/roi-performance',
+      icon: TrendingUp,
+      children: [
+        { label: 'ROI Calculator', href: '/roi-performance/roi-calculator' },
+        { label: 'Enter the Airbnb Market', href: '/roi-performance/enter-airbnb-market' },
+        { label: 'Consultancy & Training', href: '/roi-performance/consultancy-and-training' },
+        { label: 'Performance Optimisation', href: '/roi-performance/performance-optimisation' },
+      ],
+    },
+    {
+      label: 'About',
+      href: '/about',
+      icon: Users,
+      children: [
+        { label: 'About Us', href: '/about' },
+        { label: 'Why Us', href: '/about/why-us' },
+        { label: 'Our Team', href: '/about/our-team' },
+        { label: 'Our Clients', href: '/about/our-clients' },
+        { label: 'Client Reviews', href: '/about/reviews' },
+        { label: 'Case Studies', href: '/about/case-studies' },
+      ],
+    },
     { label: 'Blog', href: '/blog', icon: BookOpen },
+    { label: 'FAQ', href: '/faq', icon: HelpCircle },
     { label: 'Contact', href: '/contact', icon: Mail },
   ],
 
   // ─── Footer links ──────────────────────────────────────────────────────────
   footerLinks: [
     {
-      heading: 'Company',
+      heading: 'Services',
       links: [
-        { label: 'About', href: '/about' },
-        { label: 'Services', href: '/services' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Contact', href: '/contact' },
+        { label: 'Airbnb Virtual Assistant', href: '/services/airbnb-va' },
+        { label: 'Direct Booking Engine', href: '/services/direct-booking-engine' },
+        { label: 'Lead Generation', href: '/services/lead-generation' },
+        { label: 'Social Media Management', href: '/services/social-media-management' },
+        { label: 'Systems Building', href: '/services/systems-building' },
       ],
     },
     {
-      heading: 'Content',
-      links: [{ label: 'Blog', href: '/blog' }],
+      heading: 'Company',
+      links: [
+        { label: 'About Us', href: '/about' },
+        { label: 'Why Us', href: '/about/why-us' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'Blog', href: '/blog' },
+        { label: 'FAQ', href: '/faq' },
+        { label: 'Contact', href: '/contact' },
+      ],
     },
     {
       heading: 'Legal',
@@ -177,22 +169,22 @@ const siteConfig: SiteConfig = {
   // ─── Contact ───────────────────────────────────────────────────────────────
   contact: {
     email: 'hello@assistbnb.com',
-    phone: '+1 (555) 000-0000',
-    address: '123 Main St, San Francisco, CA 94105',
+    phone: '+44 20 0000 0000',
+    address: '86-90 Paul Street, London, EC2A 4NE, United Kingdom',
   },
 
   // ─── Social ────────────────────────────────────────────────────────────────
   social: [
     { platform: 'Twitter / X', href: 'https://twitter.com/assistbnb', icon: 'twitter' },
     { platform: 'LinkedIn', href: 'https://linkedin.com/company/assistbnb', icon: 'linkedin' },
-    { platform: 'GitHub', href: 'https://github.com/assistbnb', icon: 'github' },
+    { platform: 'Instagram', href: 'https://instagram.com/assistbnb', icon: 'instagram' },
   ],
 
   // ─── Organization (used for JSON-LD structured data) ───────────────────────
   org: {
-    legalName: 'Assist BNB LLC',
-    foundingYear: 2020,
-    areaServed: 'Worldwide',
+    legalName: 'Assist BNB Ltd',
+    foundingYear: 2021,
+    areaServed: 'United Kingdom',
   },
 }
 
