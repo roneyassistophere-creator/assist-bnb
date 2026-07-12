@@ -37,7 +37,7 @@ export default async function PricingOptimisationPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Pricing Optimisation', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function PricingOptimisationPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Pricing Optimisation', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Pricing Optimisation"
+        eyebrow="Airbnb VA · Pricing Optimisation"
         title="Pricing Optimisation That Balances Occupancy and Revenue"
         subhead="Dynamic, actively monitored pricing that responds to demand and calendar gaps — not a rate set once in January and left to drift."
         overview={[

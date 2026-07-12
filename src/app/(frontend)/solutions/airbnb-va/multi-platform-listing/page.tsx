@@ -37,7 +37,7 @@ export default async function MultiPlatformListingPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Multi-Platform Listing', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function MultiPlatformListingPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Multi-Platform Listing', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Multi-Platform Listing"
+        eyebrow="Airbnb VA · Multi-Platform Listing"
         title="Multi-Platform Listing Management for Airbnb, Booking.com and Vrbo"
         subhead="One coordinated system across every platform you list on — synced calendars, aligned pricing, and consistent presentation, so more channels means more bookings, not more chaos."
         overview={[

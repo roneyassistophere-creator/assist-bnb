@@ -37,7 +37,7 @@ export default async function GraphicalContentCreationPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Graphical Content Creation', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function GraphicalContentCreationPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Graphical Content Creation', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Graphical Content Creation"
+        eyebrow="Airbnb VA · Graphical Content Creation"
         title="Graphical Content That Makes Your Listing Look Intentional"
         subhead="Branded visuals, feature callouts and marketing graphics designed to make your listing stand out — built around your property, not a generic template."
         overview={[

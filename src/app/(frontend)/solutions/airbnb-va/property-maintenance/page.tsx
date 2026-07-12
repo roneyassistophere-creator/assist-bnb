@@ -37,7 +37,7 @@ export default async function PropertyMaintenancePage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Property Maintenance', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function PropertyMaintenancePage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Property Maintenance', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Property Maintenance"
+        eyebrow="Airbnb VA · Property Maintenance"
         title="Property Maintenance Coordination That Keeps Issues Under Control"
         subhead="Every issue logged, prioritised and tracked to resolution, with contractors coordinated on your behalf — so nothing sits unresolved and no one needs chasing."
         overview={[

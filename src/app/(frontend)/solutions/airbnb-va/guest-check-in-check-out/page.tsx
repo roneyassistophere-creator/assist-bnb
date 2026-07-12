@@ -37,7 +37,7 @@ export default async function GuestCheckInCheckOutPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Guest Check-In & Check-Out', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function GuestCheckInCheckOutPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Guest Check-In & Check-Out', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Guest Check-In & Check-Out"
+        eyebrow="Airbnb VA · Guest Check-In & Check-Out"
         title="Guest Check-In and Check-Out Management That Removes the Stress"
         subhead="Clear instructions, coordinated timing, and a smooth handover to your cleaning team — every arrival and departure managed end to end."
         overview={[

@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return generatePageMeta({
     slug: 'solutions/airbnb-va',
     seoDoc,
-    fallbackTitle: 'Airbnb Virtual Assistant',
+    fallbackTitle: 'Airbnb VA',
   })
 }
 
@@ -46,7 +46,7 @@ export default async function AirbnbVaPage() {
         dangerouslySetInnerHTML={{
           __html: jsonLdScript([
             webPageSchema({
-              name: seoDoc?.meta?.title ?? 'Airbnb Virtual Assistant',
+              name: seoDoc?.meta?.title ?? 'Airbnb VA',
               description:
                 seoDoc?.meta?.description ??
                 'Full Airbnb virtual assistant services for UK hosts, covering guest communication, cleaning, listings, and pricing.',
@@ -56,7 +56,7 @@ export default async function AirbnbVaPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
             ]),
           ]),
         }}
@@ -65,10 +65,10 @@ export default async function AirbnbVaPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
         ]}
-        eyebrow="Solutions · Airbnb Virtual Assistant"
-        title="Airbnb Virtual Assistant Solutions That Actually Run Your Operations"
+        eyebrow="Solutions · Airbnb VA"
+        title="Airbnb VA Solutions That Actually Run Your Operations"
         subhead="A full remote operations team for UK hosts — guest communication, cleaning coordination, pricing, listings, and the systems that hold it all together."
         overview={[
           'Most Airbnb VAs complete tasks in isolation: reply to a message here, update a calendar there. That works for a week. It falls apart the moment your portfolio grows past what you can personally supervise.',

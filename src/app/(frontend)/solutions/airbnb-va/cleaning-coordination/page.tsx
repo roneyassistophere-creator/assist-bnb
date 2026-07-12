@@ -37,7 +37,7 @@ export default async function CleaningCoordinationPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Cleaning Coordination', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function CleaningCoordinationPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Cleaning Coordination', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Cleaning Coordination"
+        eyebrow="Airbnb VA · Cleaning Coordination"
         title="Cleaning Coordination That Keeps Every Turnover on Time"
         subhead="Cleaners scheduled, notified and tracked against your actual booking calendar — so turnovers happen on time, every time."
         overview={[

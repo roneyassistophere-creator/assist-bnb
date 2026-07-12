@@ -37,7 +37,7 @@ export default async function ProfessionalPhotographyPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Professional Photography', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function ProfessionalPhotographyPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Professional Photography', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Professional Photography"
+        eyebrow="Airbnb VA · Professional Photography"
         title="Professional Photography Support That Gets the Click"
         subhead="Preparation guidance, shot planning and image selection that turns your property's photos into your strongest booking driver."
         overview={[

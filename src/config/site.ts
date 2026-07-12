@@ -2,10 +2,8 @@ import {
   Home,
   Layers,
   Users,
-  BookOpen,
   Mail,
   TrendingUp,
-  HelpCircle,
   Globe,
   Star,
   Settings,
@@ -16,6 +14,18 @@ import {
   UserCheck,
   Building2,
   FileText,
+  MessageSquare,
+  ShieldCheck,
+  CalendarCheck,
+  Calendar,
+  Sparkles,
+  Package,
+  Wrench,
+  LayoutGrid,
+  PenLine,
+  SlidersHorizontal,
+  Camera,
+  Palette,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -37,6 +47,10 @@ export type NavLink = {
   external?: boolean
   icon?: LucideIcon
   children?: NavChild[]
+  /** Renders as a wide multi-column mega menu instead of the standard narrow dropdown. */
+  megaMenu?: boolean
+  /** Lays out this dropdown's children in a grid with this many columns instead of a single list. */
+  columns?: number
 }
 
 export type FooterLinkGroup = {
@@ -111,17 +125,78 @@ const siteConfig: SiteConfig = {
 
   // ─── Navigation ────────────────────────────────────────────────────────────
   nav: [
-    { label: 'Home', href: '/', icon: Home },
+    {
+      label: 'Airbnb VA',
+      href: '/solutions/airbnb-va',
+      icon: Home,
+      columns: 2,
+      children: [
+        { label: 'Guest Communication', href: '/solutions/airbnb-va/guest-communication', icon: MessageSquare },
+        { label: 'Guest Vetting', href: '/solutions/airbnb-va/guest-vetting', icon: ShieldCheck },
+        { label: 'Guest Check-In & Check-Out', href: '/solutions/airbnb-va/guest-check-in-check-out', icon: CalendarCheck },
+        { label: 'Calendar Management', href: '/solutions/airbnb-va/calendar-management', icon: Calendar },
+        { label: 'Cleaning Coordination', href: '/solutions/airbnb-va/cleaning-coordination', icon: Sparkles },
+        { label: 'Linen & Toiletries Management', href: '/solutions/airbnb-va/linen-toiletries', icon: Package },
+        { label: 'Property Maintenance', href: '/solutions/airbnb-va/property-maintenance', icon: Wrench },
+        { label: 'Multi-Platform Listing', href: '/solutions/airbnb-va/multi-platform-listing', icon: LayoutGrid },
+        { label: 'Listing Creation & Optimisation', href: '/solutions/airbnb-va/listing-creation-optimisation', icon: PenLine },
+        { label: 'Pricing Optimisation', href: '/solutions/airbnb-va/pricing-optimisation', icon: SlidersHorizontal },
+        { label: 'Professional Photography', href: '/solutions/airbnb-va/professional-photography', icon: Camera },
+        { label: 'Monthly Finance Reporting', href: '/solutions/airbnb-va/monthly-finance-reporting', icon: BarChart2 },
+        { label: 'Graphical Content Creation', href: '/solutions/airbnb-va/graphical-content-creation', icon: Palette },
+      ],
+    },
     {
       label: 'Solutions',
       href: '/solutions',
       icon: Layers,
+      megaMenu: true,
       children: [
-        { label: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va', icon: Home },
-        { label: 'Direct Booking Engine', href: '/solutions/direct-booking-engine', icon: Globe },
-        { label: 'Lead Generation', href: '/solutions/lead-generation', icon: TrendingUp },
-        { label: 'Social Media Management', href: '/solutions/social-media-management', icon: Star },
-        { label: 'Systems Building', href: '/solutions/systems-building', icon: Settings },
+        {
+          label: 'Direct Booking Engine',
+          href: '/solutions/direct-booking-engine',
+          icon: Globe,
+          children: [
+            { label: 'Direct Booking Website', href: '/solutions/direct-booking-engine/direct-booking-website' },
+            { label: 'Direct Booking Conversions', href: '/solutions/direct-booking-engine/direct-booking-conversions' },
+            { label: 'Booking Engine Integration', href: '/solutions/direct-booking-engine/booking-engine-integration' },
+            { label: 'Payment Setup', href: '/solutions/direct-booking-engine/payment-setup' },
+            { label: 'SEO & Organic Growth', href: '/solutions/direct-booking-engine/seo-organic-growth' },
+            { label: 'Google Ads', href: '/solutions/direct-booking-engine/google-ads' },
+          ],
+        },
+        {
+          label: 'Lead Generation',
+          href: '/solutions/lead-generation',
+          icon: TrendingUp,
+          children: [
+            { label: 'Landlord Leads', href: '/solutions/lead-generation/landlord-leads' },
+            { label: 'Guest Leads', href: '/solutions/lead-generation/guest-leads' },
+          ],
+        },
+        {
+          label: 'Social Media Management',
+          href: '/solutions/social-media-management',
+          icon: Star,
+          children: [
+            { label: 'Content Creation', href: '/solutions/social-media-management/content-creation' },
+            { label: 'Posting & Scheduling', href: '/solutions/social-media-management/posting-and-scheduling' },
+            { label: 'Brand Growth', href: '/solutions/social-media-management/brand-growth' },
+            { label: 'Community Engagement', href: '/solutions/social-media-management/community-engagement' },
+            { label: 'Platform Management', href: '/solutions/social-media-management/platform-management' },
+          ],
+        },
+        {
+          label: 'Systems Building',
+          href: '/solutions/systems-building',
+          icon: Settings,
+          children: [
+            { label: 'STR Business Setup', href: '/solutions/systems-building/str-business-setup' },
+            { label: 'STR Automation', href: '/solutions/systems-building/str-automation' },
+            { label: 'SOP Creation', href: '/solutions/systems-building/sop-creation' },
+            { label: 'Team Structuring', href: '/solutions/systems-building/team-structuring' },
+          ],
+        },
       ],
     },
     {
@@ -148,8 +223,6 @@ const siteConfig: SiteConfig = {
         { label: 'Case Studies', href: '/about/case-studies', icon: FileText },
       ],
     },
-    { label: 'Blog', href: '/blog', icon: BookOpen },
-    { label: 'FAQ', href: '/faq', icon: HelpCircle },
     { label: 'Contact', href: '/contact', icon: Mail },
   ],
 
@@ -158,7 +231,7 @@ const siteConfig: SiteConfig = {
     {
       heading: 'Solutions',
       links: [
-        { label: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+        { label: 'Airbnb VA', href: '/solutions/airbnb-va' },
         { label: 'Direct Booking Engine', href: '/solutions/direct-booking-engine' },
         { label: 'Lead Generation', href: '/solutions/lead-generation' },
         { label: 'Social Media Management', href: '/solutions/social-media-management' },

@@ -37,7 +37,7 @@ export default async function GuestVettingPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Guest Vetting', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function GuestVettingPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Guest Vetting', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Guest Vetting"
+        eyebrow="Airbnb VA · Guest Vetting"
         title="Guest Vetting That Protects Your Property Before Check-In"
         subhead="A structured review of every booking request — not a gut feeling — so risk is filtered out before it ever reaches your door."
         overview={[

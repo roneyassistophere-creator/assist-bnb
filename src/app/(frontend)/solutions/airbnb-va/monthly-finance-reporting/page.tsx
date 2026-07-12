@@ -37,7 +37,7 @@ export default async function MonthlyFinanceReportingPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Monthly Finance Reporting', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function MonthlyFinanceReportingPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Monthly Finance Reporting', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Monthly Finance Reporting"
+        eyebrow="Airbnb VA · Monthly Finance Reporting"
         title="Monthly Finance Reporting That Shows You What's Actually Happening"
         subhead="A clear, consistent monthly snapshot of bookings, revenue and occupancy across every property — so decisions are based on data, not guesswork."
         overview={[

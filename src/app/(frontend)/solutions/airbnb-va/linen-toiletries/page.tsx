@@ -37,7 +37,7 @@ export default async function LinenToiletriesPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Linen & Toiletries Management', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function LinenToiletriesPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Linen & Toiletries Management', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Linen & Toiletries"
+        eyebrow="Airbnb VA · Linen & Toiletries"
         title="Linen and Toiletries Management That Keeps Every Stay Consistent"
         subhead="Stock tracked, restocking coordinated with your cleaning schedule, and every property held to the same standard — so nothing runs short before a guest arrives."
         overview={[

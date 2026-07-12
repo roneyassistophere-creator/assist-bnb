@@ -37,7 +37,7 @@ export default async function GuestCommunicationPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Guest Communication', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function GuestCommunicationPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Guest Communication', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Guest Communication"
+        eyebrow="Airbnb VA · Guest Communication"
         title="Guest Communication That Keeps Your STR Business Running"
         subhead="Guest communication isn't just replying to messages — it's the front line of your reviews, your rebookings, and your reputation."
         overview={[

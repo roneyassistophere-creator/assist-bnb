@@ -37,7 +37,7 @@ export default async function ListingCreationOptimisationPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Listing Creation & Optimisation', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function ListingCreationOptimisationPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Listing Creation & Optimisation', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Listing Creation & Optimisation"
+        eyebrow="Airbnb VA · Listing Creation & Optimisation"
         title="Listing Creation and Optimisation That Turns Views Into Bookings"
         subhead="Titles, descriptions, photo order and structure — built around how guests actually decide, not just what's technically accurate about your property."
         overview={[

@@ -37,7 +37,7 @@ export default async function CalendarManagementPage() {
             breadcrumbSchema([
               { name: 'Home', href: '/' },
               { name: 'Solutions', href: '/solutions' },
-              { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+              { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
               { name: 'Calendar Management', href: `/${slug}` },
             ]),
           ]),
@@ -47,10 +47,10 @@ export default async function CalendarManagementPage() {
       <ServiceTemplate
         breadcrumbs={[
           { name: 'Solutions', href: '/solutions' },
-          { name: 'Airbnb Virtual Assistant', href: '/solutions/airbnb-va' },
+          { name: 'Airbnb VA', href: '/solutions/airbnb-va' },
           { name: 'Calendar Management', href: `/${slug}` },
         ]}
-        eyebrow="Airbnb Virtual Assistant · Calendar Management"
+        eyebrow="Airbnb VA · Calendar Management"
         title="Calendar Management That Keeps Bookings Consistent"
         subhead="Active, ongoing availability management across every platform you list on — reducing gaps instead of just reacting to them."
         overview={[
